@@ -63,8 +63,37 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+
+<link href="css/lrtk.css" rel="stylesheet" type="text/css">
+<!-- 返回顶部 开始 -->
+	<script>
+	  function init(){
+	  	$(".btn_top").hide();
+			$(".btn_top").click(function(){
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$(window).bind('scroll resize',function(){
+				if($(window).scrollTop()<=300){
+					$(".btn_top").hide();
+				}else{
+					$(".btn_top").show();
+				}
+			});
+	  }
+	</script>
+<!-- 返回顶部 结束 -->
+
+
 	</head>
-	<body>
+	<body onload="init()">
+
+			<!-- 代码 开始 -->
+			<div class="izl-rmenu">
+			    <a class="consult" target="_blank"><div class="phone" style="display:none;">171-9120-4821</div></a>    
+			    <a class="cart"><div class="pic"></div></a>   
+			    <a href="javascript:void(0)" class="btn_top" style="display: block;"></a>
+			</div>
+			<!-- 代码 结束 -->
 
 			<!-- START #fh5co-header -->
 			<header id="fh5co-header-section" role="header" class="" >
@@ -289,7 +318,11 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 							<li><a href="#"><i class="ti-github"></i></a></li>
 							<li><a href="#"><i class="ti-linkedin"></i></a></li>
 						</ul> -->
-						<p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2015 <a href="#">Display</a>. All rights reserved. Crafted with love <em>by</em> <a href="http://freehtml5.co" target="_blank">FREEHTML5.co</a> <br> Images by <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
+						
+						<p class="text-muted fh5co-no-margin-bottom text-center">
+							<small>&copy; 2015 <a href="#">Display</a>. 学长帮工作室</a>
+							</small>
+						</p>
 
 					</div>
 				</footer>

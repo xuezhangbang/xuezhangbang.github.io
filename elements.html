@@ -63,8 +63,37 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+<link href="css/lrtk.css" rel="stylesheet" type="text/css">
+<!-- 返回顶部 开始 -->
+	<script>
+	  function init(){
+	  	$(".btn_top").hide();
+			$(".btn_top").click(function(){
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$(window).bind('scroll resize',function(){
+				if($(window).scrollTop()<=300){
+					$(".btn_top").hide();
+				}else{
+					$(".btn_top").show();
+				}
+			});
+	  }
+	</script>
+<!-- 返回顶部 结束 -->
+
+
+
 	</head>
-	<body class="inner-page">
+	<body 　onload="init()">
+
+			<!-- 悬浮窗代码 开始 -->
+			<div class="izl-rmenu">
+			    <a class="consult" target="_blank"><div class="phone" style="display:none;">171-9120-4821</div></a>    
+			    <a class="cart"><div class="pic"></div></a>   
+			    <a href="javascript:void(0)" class="btn_top" style="display: block;"></a>
+			</div>
+			<!-- 代码 结束 -->
 
 			<!-- START #fh5co-header -->
 			<header id="fh5co-header-section" role="header" class="" >
@@ -76,7 +105,7 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active">
+							<li >
 								<a href="index.html">首页</a>
 							</li>
 							<!--<li>-->
@@ -87,7 +116,7 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 									 <!--<li><a href="right-sidebar.html">公众号</a></li>-->
 								<!--</ul>-->
 							<!--</li>-->
-							<li><a href="elements.html">提供服务</a></li>
+							<li class="active"><a href="elements.html">提供服务</a></li>
 							<li><a href="contact.html">联系我们</a></li>
 						</ul>
 					</nav>
@@ -124,7 +153,7 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 
 								<div id="fh5co-tab-feature-center" class="fh5co-tab text-center">
 									<ul class="resp-tabs-list hor_1">
-										<li><i class="fh5co-tab-menu-icon ti-paint-bucket"></i>以往案例</li>
+										<li><i class="fh5co-tab-menu-icon ti-paint-bucket"></i>以往案例(部分)</li>
 										<li><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>服务内容</li>
 										<li><i class="fh5co-tab-menu-icon ti-shopping-cart"></i>交付流程</li>
 									</ul>
@@ -178,6 +207,37 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 										</div>
 
 										<div>
+											<div class="row">
+												<div class="col-md-12">
+													<h1 class="h1">服务模式</h1>
+												</div>
+												<div class="col-xs-12">
+													<h3>软件定制开发</h3>
+													<p>根据需求进行开发，提供代码的开发。具体收费需联系</p>
+													<h3>购买现有产品</h3>
+													<p>
+														根据需求，选择符合需求的产品，不提供开发服务,详情请联系微信客服
+													</p>
+												</div>
+											</div>
+											<hr>
+
+											<div class="row">
+												<div class="col-md-12">
+													<h1 class="h1">服务内容</h1>
+												</div>
+												
+											</div>
+
+											<div class="row">
+												<div class="col-md-12">
+													<h2 class="h3">移动端软件开发</h2>
+												</div>
+												<div class="col-xs-12">
+													<p>运用专业技术团队的思想与实战经验，帮助企业以更经济更快速的方式打开市场。</p>
+												</div>
+											</div>
+
 											<div class="row">
 												<div class="col-md-12">
 													<h2 class="h3">移动端软件开发</h2>
@@ -276,7 +336,10 @@ DESIGNED & DEVELOPED by FREEHTML5.CO
 
 				<footer id="fh5co-footer">
 					<div class="container">
-						<p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2015 <a href="#">Display</a>. All rights reserved. Crafted with love <em>by</em> <a href="http://freehtml5.co" target="_blank">FREEHTML5.co</a> <br> Images by <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
+					<p class="text-muted fh5co-no-margin-bottom text-center">
+							<small>&copy; 2015 <a href="#">Display</a>. 学长帮工作室</a>
+							</small>
+						</p>
 					</div>
 				</footer>
 			</div>
